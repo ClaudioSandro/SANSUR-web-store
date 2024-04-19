@@ -144,9 +144,8 @@
     </ul>
   </section>
 
-  <footer>
-    <p>&copy; 2023 Sansur. Todos los derechos reservados.</p>
-  </footer>
+  <?php include './Public/Components/footer.php'; ?>
+
 </body>
 
 </html>
