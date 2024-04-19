@@ -16,19 +16,7 @@
       <a class="brand" href="#">Brand</a>      
       <div class="menu-items">
         <a href="#">Inicio</a>
-        <a href="./Public/Components/index.php">Opción 1</a>
-        <a href="#">Opción 2</a>
-        <a href="#">Opción 3</a>
-        <div class="multiopcion">
-          <span>Multiopcion</span>
-          <div class="submenu">
-            <ul>
-              <li><a class="opcionessubmenu" href="#">Opción A</a></li>
-              <li><a class="opcionessubmenu" href="#">Opción B</a></li>
-              <li><a class="opcionessubmenu" href="#">Opción C</a></li>
-            </ul>
-          </div>
-        </div>
+        <a href="./Public/Components/index.php">TIENDA</a>
         <a class="cajasnav" id="Registrarseid">Registrar</a>
         <a class="cajasnav" id="iniciarid">Iniciar Sesión</a>
         <a class="cajasnav" id="carritoid">Carrito de Compras</a>
@@ -50,29 +38,57 @@
 
 
 
-    <div id="Registrarsebox" class="modal">
-      <div class="box-content">
-          <span id="CerrarRegistrarse">&times;</span>
-          <section id="Registrarse">
-              <h2>Registrarse</h2>
-              <form onsubmit="aprobacion()">
-                  <label for="usuario">Usuario:</label>
-                  <br>
-                  <input type="text" id="usuario" name="usuario" required>
-                  <br>
-                  <label for="email">Email:</label>
-                  <br>
-                  <input type="email" id="email" name="email" required>
-                  <br>
-                  <label for="contrasena">Contraseña:</label>
-                  <br>
-                  <input type="password" id="contrasena" name="contrasena" required>
-                  <br>
-                  <button type="submit">Registrarse</button>
-              </form>
-          </section>
-      </div>
+  <div id="Registrarsebox" class="modal">
+    <div class="box-content">
+        <span id="CerrarRegistrarse">&times;</span>
+        <section id="Registrarse">
+            <h2>Registrarse</h2>
+            <form onsubmit="aprobacion()">
+                <label for="nombreUsuario">Nombre:</label>
+                <br>
+                <input type="text" id="nombreUsuario" name="nombreUsuario" required>
+                <br>
+                <label for="apellidoPaterno">Apellido Paterno:</label>
+                <br>
+                <input type="text" id="apellidoPaterno" name="apellidoPaterno" required>
+                <br>
+                <label for="apellidoMaterno">Apellido Materno:</label>
+                <br>
+                <input type="text" id="apellidoMaterno" name="apellidoMaterno" required>
+                <br>
+                <label for="eMail">Email:</label>
+                <br>
+                <input type="email" id="eMail" name="eMail" required>
+                <br>
+                <label for="contrasenia">Contraseña:</label>
+                <br>
+                <input type="password" id="contrasenia" name="contrasenia" required>
+                <br>
+                <label for="celular">Celular:</label>
+                <br>
+                <input type="tel" id="celular" name="celular" required>
+                <br>
+                <label for="fechaRegistro">Fecha de Registro:</label>
+                <br>
+                <input type="date" id="fechaRegistro" name="fechaRegistro" required>
+                <br>
+                <label for="region">Región:</label>
+                <br>
+                <input type="text" id="region" name="region" required>
+                <br>
+                <label for="distrito">Distrito:</label>
+                <br>
+                <input type="text" id="distrito" name="distrito" required>
+                <br>
+                <label for="direccion">Dirección:</label>
+                <br>
+                <textarea id="direccion" name="direccion" required></textarea>
+                <br>
+                <button type="submit">Registrarse</button>
+            </form>
+        </section>
     </div>
+</div>
   
     <div id="iniciarSesionbox" class="modal">
         <div class="box-content">
@@ -80,13 +96,13 @@
             <section id="iniciarSesion">
                 <h2>Iniciar Sesión</h2>
                 <form>
-                    <label for="usuario">Usuario:</label>
+                    <label for="nombreUsuario">Nombre:</label>
                     <br>
-                    <input type="text" id="usuario" name="usuario" required>
+                    <input type="text" id="nombreUsuario" name="nombreUsuario" required>
                     <br>
-                    <label for="contrasena">Contraseña:</label>
+                    <label for="contrasenia">Contraseña:</label>
                     <br>
-                    <input type="password" id="contrasena" name="contrasena" required>
+                    <input type="password" id="contrasenia" name="contrasenia" required>
                     <br>
                     <button type="submit">Iniciar Sesión</button>
                 </form>
