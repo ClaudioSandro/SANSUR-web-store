@@ -16,7 +16,7 @@
       <a class="brand" href="#">Brand</a>      
       <div class="menu-items">
         <a href="#">Inicio</a>
-        <a href="#">Opción 1</a>
+        <a href="./Public/Components/index.php">Opción 1</a>
         <a href="#">Opción 2</a>
         <a href="#">Opción 3</a>
         <div class="multiopcion">
