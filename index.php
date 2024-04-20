@@ -13,9 +13,8 @@
   <div class="opacidad" id="opacidad"></div>
   <header>
     <nav class="menu">
-      <a class="brand" href="#">Brand</a>      
+      <a class="brand" href="./index.php">Sansur</a>      
       <div class="menu-items">
-        <a href="#">Inicio</a>
         <a href="./Public/Components/index.php">TIENDA</a>
         <a class="cajasnav" id="Registrarseid">Registrar</a>
         <a class="cajasnav" id="iniciarid">Iniciar Sesión</a>
@@ -35,7 +34,6 @@
       <p>Bienvenido</p>
     </div>
   </div>
-
 
 
   <div id="Registrarsebox" class="modal">

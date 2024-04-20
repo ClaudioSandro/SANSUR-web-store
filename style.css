@@ -233,6 +233,17 @@ body {
     border-radius: 5px;
 }
 
+
+/* Estilos para ajustar el tamaño de los campos de entrada */
+
+#Registrarse textarea {
+    width: 100%;
+    padding: 2px;
+    box-sizing: border-box;
+    margin-bottom: 4px; /* Espacio entre los campos */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
 .box-content {
     padding: 20px;
 
@@ -248,13 +259,19 @@ body {
     color: white;
     padding: 10px;
     border: none;
-    border-radius: 3px;
+    border-radius: 10px;
     cursor: pointer;
     margin-top: 20px;
+    font-size: 18px;
 }
 
 #Registrarse input, #iniciarSesion input{
-    width: 90%;
+    width: 100%; /* Ancho del 100% del contenedor */
+      /* Altura de 40px */
+    padding: 2px; /* Añadir relleno alrededor del texto */
+    box-sizing: border-box; /* Incluir el relleno en el ancho total */
+    margin-bottom: 4px; /* Espacio entre los campos */
+    font-size: 16px; /* Tamaño de fuente */
 }
 
 
