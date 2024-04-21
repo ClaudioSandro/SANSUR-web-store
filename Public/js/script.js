@@ -79,7 +79,7 @@ function aprobacion() {
 
 let productos = [];
 
-fetch("./productos.json")
+fetch("./Public/js/productos.json")
     .then(response => response.json())
     .then(data => {
         productos = data;
@@ -167,8 +167,6 @@ function actualizarNumerito() {
     let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
     numerito.innerText = nuevoNumerito;
 }
-
-
 
 
 

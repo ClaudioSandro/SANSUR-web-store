@@ -1,5 +1,6 @@
+
 <?php
-$host = "localhost"; 
+/*$host = "localhost"; 
 $usuario = "root"; 
 $contraseña = ""; 
 $base_de_datos = "sansur"; 
@@ -13,8 +14,9 @@ if (!$conexion ->connect_error) {
 }
 else {
   echo "<h2>Conectado</h2>" ;
-}
+}*/
 ?>
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -212,7 +214,7 @@ else {
   <section id="tienda">
   
       <div class="wrapper">
-            <h2 class="titulo-principal" id="titulo-principal">Todos los productos</h2>
+            
             <div id="contenedor-productos" class="contenedor-productos">
                 <!-- Esto se va a rellenar con JS -->
             </div>
@@ -231,8 +233,8 @@ else {
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://kit.fontawesome.com/5f7875a9e1.js" crossorigin="anonymous"></script>
-  <script src="script.js"></script>
-  <script src="script2.js"></script>
+  <script src="./Public/js/script.js"></script>
+  <script src="./Public/js/script2.js"></script>
 </body>
 
 </html>
