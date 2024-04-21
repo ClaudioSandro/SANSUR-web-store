@@ -1,3 +1,21 @@
+<?php
+$host = "localhost"; 
+$usuario = "root"; 
+$contraseña = ""; 
+$base_de_datos = "sansur"; 
+
+
+$conexion = new mysqli($host, $usuario, $contraseña, $base_de_datos);
+
+// Verificar la conexión
+if (!$conexion ->connect_error) {
+    die('Error de conexión: ' . $conexion ->connect_error);
+}
+else {
+  echo "<h2>Conectado</h2>" ;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -146,7 +164,11 @@
 
   <script src="https://kit.fontawesome.com/5f7875a9e1.js" crossorigin="anonymous"></script>
 
-  <?php include './Public/Components/footer.php'; ?>
+  <?php 
+  include './Public/Components/footer.php'; 
+  
+  
+  ?>
 
 </body>
 
