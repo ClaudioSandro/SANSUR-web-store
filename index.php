@@ -24,7 +24,8 @@ else {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sansur</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
 <body>
@@ -43,7 +44,7 @@ else {
         </div>
           <a class="cajasnav" id="Registrarseid">Registrarse</a>
           <a class="cajasnav" id="iniciarid">Iniciar sesión</a>
-          <a class="cajasnav" id="carritoid"><i class="fa-solid fa-cart-shopping"></i></a>
+          <a class="cajasnav" id="carritoid"><i class="fa-solid fa-cart-shopping"></i> <span id="numerito" class="numerito">0</span></a>
       </div>
         <div class="menuplegable">
           <span class="bar"></span>
@@ -136,14 +137,65 @@ else {
         <div class="box-content">
             <span id="CerrarCarrito">&times;</span>
             <section id="carritoCompras">
-                <h2>Carrito de Compras</h2>
-                <div class="carrito">
-                    <ul id="listaCarrito">
-                        <!-- La lista de productos en el carrito se llenará dinámicamente con JavaScript -->
-                    </ul>
-                    <p>Total: $<span id="totalCarrito">0.00</span></p>
-                    <button type="submit">Comprar Carrito</button>
+            <div class="wrapper">
+        <header class="header-mobile">
+            <h1 class="logo">CarpiShop</h1>
+            <button class="open-menu" id="open-menu">
+                <i class="bi bi-list"></i>
+            </button>
+        </header>
+        <aside>
+            <button class="close-menu" id="close-menu">
+                <i class="bi bi-x"></i>
+            </button>
+            <header>
+                <h1 class="logo">CarpiShop</h1>
+            </header>
+            <nav>
+                <ul>
+                    <li>
+                        <a class="boton-menu boton-volver" href="./index.html">
+                            <i class="bi bi-arrow-return-left"></i> Seguir comprando
+                        </a>
+                    </li>
+                    <li>
+                        <a class="boton-menu boton-carrito active" href="./carrito.html">
+                            <i class="bi bi-cart-fill"></i> Carrito
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <footer>
+                <p class="texto-footer">© 2022 Carpi Coder</p>
+            </footer>
+        </aside>
+        <main>
+            <h2 class="titulo-principal">Carrito</h2>
+            <div class="contenedor-carrito">
+                <p id="carrito-vacio" class="carrito-vacio">Tu carrito está vacío. <i class="bi bi-emoji-frown"></i></p>
+
+                <div id="carrito-productos" class="carrito-productos disabled">
+                    <!-- Esto se va a completar con el JS -->
                 </div>
+
+                <div id="carrito-acciones" class="carrito-acciones disabled">
+                    <div class="carrito-acciones-izquierda">
+                        <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar">Vaciar carrito</button>
+                    </div>
+                    <div class="carrito-acciones-derecha">
+                        <div class="carrito-acciones-total">
+                            <p>Total:</p>
+                            <p id="total">$3000</p>
+                        </div>
+                        <button id="carrito-acciones-comprar" class="carrito-acciones-comprar">Comprar ahora</button>
+                    </div>
+                </div>
+
+                <p id="carrito-comprado" class="carrito-comprado disabled">Muchas gracias por tu compra. <i class="bi bi-emoji-laughing"></i></p>
+
+            </div>
+        </main>
+    </div>
             </section>
         </div>
     </div>
@@ -157,12 +209,18 @@ else {
     
   </section>
 
-  <section id="informacion">
-    
+  <section id="tienda">
+  
+      <div class="wrapper">
+            <h2 class="titulo-principal" id="titulo-principal">Todos los productos</h2>
+            <div id="contenedor-productos" class="contenedor-productos">
+                <!-- Esto se va a rellenar con JS -->
+            </div>
+      </div>
   </section>
 
 
-  <script src="https://kit.fontawesome.com/5f7875a9e1.js" crossorigin="anonymous"></script>
+ 
 
   <?php 
   include './Public/Components/footer.php'; 
@@ -170,6 +228,11 @@ else {
   
   ?>
 
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/5f7875a9e1.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <script src="script2.js"></script>
 </body>
 
 </html>
