@@ -19,9 +19,9 @@
           <input type="text" class="search-box" placeholder="Buscar...">
           <button class="search-button">Buscar</button>
         </div>
-          <a class="cajasnav" id="Registrarseid">Registrar</a>
-          <a class="cajasnav" id="iniciarid">Iniciar Sesión</a>
-          <a class="cajasnav" id="carritoid">Carrito de Compras</a>
+          <a class="cajasnav" id="Registrarseid">Registrarse</a>
+          <a class="cajasnav" id="iniciarid">Iniciar sesión</a>
+          <a class="cajasnav" id="carritoid"><i class="fa-solid fa-cart-shopping"></i></a>
       </div>
         <div class="menuplegable">
           <span class="bar"></span>
@@ -140,7 +140,7 @@
   </section>
 
 
-  
+  <script src="https://kit.fontawesome.com/5f7875a9e1.js" crossorigin="anonymous"></script>
 
   <?php include './Public/Components/footer.php'; ?>
 
