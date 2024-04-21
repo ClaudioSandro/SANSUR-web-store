@@ -13,7 +13,11 @@
   <div class="opacidad" id="opacidad"></div>
   <header>
     <nav class="menu">
-      <a class="brand" href="./index.php">Sansur</a>
+      <div class="logazo">
+        <a class="brand" href="./index.php"><img src="Public/img/logo_sansur.png" alt="Logo_de_Sansur"></a>
+      </div>
+      
+
       <div class="menu-items">
         <div class="search-container">
           <input type="text" class="search-box" placeholder="Buscar...">
@@ -88,7 +92,7 @@
             </form>
         </section>
     </div>
-</div>
+  </div>
   
     <div id="iniciarSesionbox" class="modal">
         <div class="box-content">
@@ -126,7 +130,7 @@
         </div>
     </div>
     
-    
+  
   <section id="inicio">
     
   </section>
