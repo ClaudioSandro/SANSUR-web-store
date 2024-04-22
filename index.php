@@ -28,6 +28,7 @@ else {
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 
 <body>
@@ -203,8 +204,36 @@ else {
     </div>
     
   
-  <section id="inicio">
-    
+  <section id="swiper">
+  <div class="swiper swiper-hero">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+        <!-- Slides -->
+            <div class="swiper-slide">
+                <img src="./Public/img/pantalones/04.jpg"
+                    alt=""
+                />
+
+            </div>
+            <div class="swiper-slide">
+                <img src="./Public/img/pantalones/04.jpg"
+                    alt=""
+                />
+            </div>
+            <div class="swiper-slide">
+                <img src="./Public/img/pantalones/04.jpg"
+                    alt=""
+                />
+            </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+    </div>
   </section>
 
   <section id="valores">
@@ -233,6 +262,7 @@ else {
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://kit.fontawesome.com/5f7875a9e1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./Public/js/script.js"></script>
   <script src="./Public/js/script2.js"></script>
 </body>
