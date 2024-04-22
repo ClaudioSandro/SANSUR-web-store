@@ -33,6 +33,24 @@ else {
 
 <body>
   <div class="opacidad" id="opacidad"></div>
+
+
+  <script>
+    
+        document.getElementById('searchInput').addEventListener('input', function () {
+          const searchTerm = this.value.toLowerCase();
+          const producto = document.querySelectorAll('.producto');
+    
+          producto.forEach((item) => {
+            const questionText = item.querySelector('.producto-detalles h3').innerText.toLowerCase();
+            const isVisible = questionText.includes(searchTerm);
+            item.style.display = isVisible ? 'block' : 'none';
+          });
+        });
+      </script>
+
+
+
   <header>
     <nav class="menu">
       <div class="logazo">
@@ -42,7 +60,7 @@ else {
 
       <div class="menu-items">
         <div class="search-container">
-          <input type="text" class="search-box" placeholder="Buscar...">
+          <input type="text" id="searchInput" class="search-box" placeholder="Buscar...">
           <button class="search-button">Buscar</button>
         </div>
           <a class="cajasnav" id="Registrarseid">Registrarse</a>
