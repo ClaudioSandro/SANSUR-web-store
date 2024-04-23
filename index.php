@@ -26,10 +26,29 @@ if (!$conexion) {
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 
 <body>
   <div class="opacidad" id="opacidad"></div>
+
+
+  <script>
+    
+        document.getElementById('searchInput').addEventListener('input', function () {
+          const searchTerm = this.value.toLowerCase();
+          const producto = document.querySelectorAll('.producto');
+    
+          producto.forEach((item) => {
+            const questionText = item.querySelector('.producto-detalles h3').innerText.toLowerCase();
+            const isVisible = questionText.includes(searchTerm);
+            item.style.display = isVisible ? 'block' : 'none';
+          });
+        });
+      </script>
+
+
+
   <header>
     <nav class="menu">
       <div class="logazo">
@@ -39,7 +58,7 @@ if (!$conexion) {
 
       <div class="menu-items">
         <div class="search-container">
-          <input type="text" class="search-box" placeholder="Buscar...">
+          <input type="text" id="searchInput" class="search-box" placeholder="Buscar...">
           <button class="search-button">Buscar</button>
         </div>
           <a class="cajasnav" id="Registrarseid">Registrarse</a>
@@ -255,8 +274,36 @@ if (!$conexion) {
     </div>
     
   
-  <section id="inicio">
-    
+  <section id="swiper">
+  <div class="swiper swiper-hero">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+        <!-- Slides -->
+            <div class="swiper-slide">
+                <img src="./Public/img/pantalones/04.jpg"
+                    alt=""
+                />
+
+            </div>
+            <div class="swiper-slide">
+                <img src="./Public/img/pantalones/04.jpg"
+                    alt=""
+                />
+            </div>
+            <div class="swiper-slide">
+                <img src="./Public/img/pantalones/04.jpg"
+                    alt=""
+                />
+            </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+    </div>
   </section>
 
   <section id="valores">
@@ -285,6 +332,7 @@ if (!$conexion) {
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://kit.fontawesome.com/5f7875a9e1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./Public/js/script.js"></script>
   <script src="./Public/js/script2.js"></script>
 </body>

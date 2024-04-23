@@ -6,6 +6,7 @@ var hamburger = document.querySelector(".menuplegable");
 		menu.classList.toggle("active");
 	})
 
+
 //////
 
 document.getElementById('iniciarid').addEventListener('click', function() {
@@ -75,6 +76,32 @@ function aprobacion() {
 }
 
 
+/////swiper
+
+const swiper = new Swiper('.swiper-hero', {
+    direction: 'horizontal',
+    loop: false,
+    allowTouchMove: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    }
+
+});
+
+
+
+
+
+
 ////////////////////////////////////////////////////tienda
 
 let productos = [];
@@ -132,18 +159,18 @@ function agregarAlCarrito(e) {
         text: "Producto agregado",
         duration: 3000,
         close: true,
-        gravity: "top", // `top` or `bottom`
+        gravity: "bottom", // `top` or `bottom`
         position: "right", // `left`, `center` or `right`
         stopOnFocus: true, // Prevents dismissing of toast on hover
         style: {
-            background: "linear-gradient(to right, #4b33a8, #785ce9)",
-            borderRadius: "2rem",
+            background: "linear-gradient(to right, #004691, #007BFF)",
+            borderRadius: "15px",
             textTransform: "uppercase",
             fontSize: ".75rem"
         },
         offset: {
-            x: '1.5rem', // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-            y: '1.5rem' // vertical axis - can be a number or a string indicating unity. eg: '2em'
+            x: '40px', // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+            y: '40px' // vertical axis - can be a number or a string indicating unity. eg: '2em'
         },
         onClick: function () {} // Callback after click
     }).showToast();

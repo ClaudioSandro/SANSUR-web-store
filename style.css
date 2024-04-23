@@ -21,6 +21,8 @@ nav {
   position: fixed;
   width: 100%;
   top: 0;
+  left: 0;
+  z-index: 1000;
 }
 .menu-items{
   display: flex;
@@ -36,7 +38,8 @@ nav {
   margin-left: 10px;
 }
 .logazo img{
-  width: 150px;
+  height: 50px;
+
 }
 
 nav a {
@@ -52,6 +55,7 @@ nav a:hover {
 
 .opcionessubmenu {
   background-color: #007BFF;
+  background-color: #004691;
   color: #fff;
   padding: 10px;
   margin: 0 10px;
@@ -67,6 +71,7 @@ nav a:hover {
   justify-content: center;
   text-align: center;
   align-items: center;
+  width: auto;
 }
 
 
@@ -78,6 +83,7 @@ nav a:hover {
   justify-content: center;
   text-align: center;
   align-items: center;
+  margin-right: 20px;
 }
 
 
@@ -143,7 +149,8 @@ body {
 .search-container {
   display: flex;
   justify-content: center;
-  margin-right: 30%;
+  margin-right: 40px;
+  height: 38px;
 }
 
 .search-box {
@@ -320,6 +327,111 @@ body {
 
 
 
+
+/*swiper*/
+
+@media screen and (max-width: 768px){
+  .swiper-hero {
+      width:100%;
+      height: auto;
+      padding-left: auto;
+      padding-right: auto;
+      grid-gap: 30px;
+      padding: 35px 0;
+  }
+
+  .swiper-img{
+      width: 100%;
+      height: auto;
+
+  }
+  
+
+  
+}
+
+#swiper{
+  margin-top:70px;
+  padding: 0;
+}
+
+
+.swiper-hero {
+  
+  width: 100%;
+}
+
+.swiper-hero img{
+  height: 200px;
+  width : 100%;
+  object-fit: cover;
+}
+
+.swiper-hero .swiper-button-prev,
+.swiper-hero .swiper-button-next,
+.swiper-ProductosNuevos .swiper-button-prev,
+.swiper-ProductosNuevos .swiper-button-next
+{
+  --swiper-navigation-size: 20px;
+  --swiper-navigation-color: black;
+  background-color: white;
+  height: 70px;
+  width: 50px;
+  margin-top: -35px;
+
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.swiper-hero .swiper-button-prev,
+.swiper-ProductosNuevos .swiper-button-prev
+{
+  border-radius: 0 65px 65px 0;
+  left: -10px;
+}
+
+.swiper-hero .swiper-button-next,
+.swiper-ProductosNuevos .swiper-button-next
+{
+  border-radius: 150px 0 0 150px;
+  right: -10px;
+}
+
+.swiper-hero:hover .swiper-button-prev,
+.swiper-hero:hover .swiper-button-next,
+.swiper-ProductosNuevos .swiper-button-prev,
+.swiper-ProductosNuevos .swiper-button-next
+{
+  opacity: 1;
+}
+
+.swiper-hero .swiper-pagination,
+.swiper-ProductosNuevos .swiper-pagination
+{
+  --swiper-pagination-color: white;
+  --swiper-pagination-bullet-size: 6px;
+  --swiper-pagination-bullet-inactive-color: black;
+  --swiper-pagination-bullet-inactive-opacity: 0.25;
+  --swiper-pagintaion-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizantal-gap: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* inicio */
 
 #inicio {
@@ -427,10 +539,10 @@ body {
 
 #tienda .wrapper{
   background-color: grey;
-  margin: 1rem;
+  margin: 20px;
   border-radius: 2rem;
   padding: 30px;
-  margin-right: 20px;
+  
 }
 
 
@@ -439,8 +551,15 @@ body {
 .contenedor-productos {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  
+  width: 100%;
   gap: 20px;
+}
+
+.producto{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
 
 .producto-imagen {
@@ -460,6 +579,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 250px;
+  height: 150px;
 
 }
 
@@ -476,6 +596,7 @@ body {
   cursor: pointer;
   border: 1px solid grey;
   transition: background-color .2s, color .2s;
+  margin-top: auto;
 }
 
 .producto-agregar:hover {
@@ -483,7 +604,9 @@ body {
   color: white;
 }
 
-
+.producto-precio{
+  margin-bottom: 0;
+}
 
 
 
