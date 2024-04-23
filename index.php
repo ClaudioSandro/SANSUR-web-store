@@ -35,21 +35,6 @@ else {
   <div class="opacidad" id="opacidad"></div>
 
 
-  <script>
-    
-        document.getElementById('searchInput').addEventListener('input', function () {
-          const searchTerm = this.value.toLowerCase();
-          const producto = document.querySelectorAll('.producto');
-    
-          producto.forEach((item) => {
-            const questionText = item.querySelector('.producto-detalles h3').innerText.toLowerCase();
-            const isVisible = questionText.includes(searchTerm);
-            item.style.display = isVisible ? 'block' : 'none';
-          });
-        });
-      </script>
-
-
 
   <header>
     <nav class="menu">
@@ -59,10 +44,11 @@ else {
       
 
       <div class="menu-items">
-        <div class="search-container">
-          <input type="text" id="searchInput" class="search-box" placeholder="Buscar...">
-          <button class="search-button">Buscar</button>
+        <div class="search-box-container">
+            <input type="text"  id="searchInput" class="search-box" placeholder="Buscar...">
+            <i class="fas fa-search search-icon"></i>
         </div>
+          
           <a class="cajasnav" id="Registrarseid">Registrarse</a>
           <a class="cajasnav" id="iniciarid">Iniciar sesión</a>
           <a class="cajasnav" id="carritoid"><i class="fa-solid fa-cart-shopping"></i> <span id="numerito" class="numerito">0</span></a>
@@ -159,37 +145,7 @@ else {
             <span id="CerrarCarrito">&times;</span>
             <section id="carritoCompras">
             <div class="wrapper">
-        <header class="header-mobile">
-            <h1 class="logo">CarpiShop</h1>
-            <button class="open-menu" id="open-menu">
-                <i class="bi bi-list"></i>
-            </button>
-        </header>
-        <aside>
-            <button class="close-menu" id="close-menu">
-                <i class="bi bi-x"></i>
-            </button>
-            <header>
-                <h1 class="logo">CarpiShop</h1>
-            </header>
-            <nav>
-                <ul>
-                    <li>
-                        <a class="boton-menu boton-volver" href="./index.html">
-                            <i class="bi bi-arrow-return-left"></i> Seguir comprando
-                        </a>
-                    </li>
-                    <li>
-                        <a class="boton-menu boton-carrito active" href="./carrito.html">
-                            <i class="bi bi-cart-fill"></i> Carrito
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <footer>
-                <p class="texto-footer">© 2022 Carpi Coder</p>
-            </footer>
-        </aside>
+        
         <main>
             <h2 class="titulo-principal">Carrito</h2>
             <div class="contenedor-carrito">
@@ -220,6 +176,7 @@ else {
             </section>
         </div>
     </div>
+    
     
   
   <section id="swiper">
@@ -253,11 +210,6 @@ else {
 
     </div>
   </section>
-
-  <section id="valores">
-    
-  </section>
-
   <section id="tienda">
   
       <div class="wrapper">
@@ -267,9 +219,32 @@ else {
             </div>
       </div>
   </section>
-
-
+  <section id="info">
+    <div class="info-container">
+        <div class="row">
+            <i class="fa-regular fa-credit-card"></i>
+            <h3>Pagos</h3>
+            <p>Usa nuestro metodo de pago, la mejor solución para pagar de forma segura y con el medio de pago que prefieras.</p>
+        </div>
+        <div class="row">
+            <i class="fa-solid fa-truck-fast"></i>
+            <h3>Envío gratis</h3>
+            <p>Compra y disfruta de envíos gratis en miles de productos.</p>
+        </div>
+        <div class="row">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Seguridad</h3>
+            <p>¿No te gusta? ¡Devuélvelo! navigationo hay nada que no puedas hacer, porque estás siempre protegido.</p>
+        </div>
+    </div>
+  </section>
  
+
+  <section id="contacto">
+    <div class="info-container">
+        
+    </div>
+  </section>
 
   <?php 
   include './Public/Components/footer.php'; 
@@ -277,12 +252,29 @@ else {
   
   ?>
 
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+
+
+    <script>
+    
+        document.getElementById('searchInput').addEventListener('input', function () {
+        const searchTerm = this.value.toLowerCase();
+        const producto = document.querySelectorAll('.producto');
+
+        producto.forEach((item) => {
+            const questionText = item.querySelector('.producto-detalles h3').innerText.toLowerCase();
+            const isVisible = questionText.includes(searchTerm);
+            item.style.display = isVisible ? 'block' : 'none';
+        });
+        });
+    </script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://kit.fontawesome.com/5f7875a9e1.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="./Public/js/script.js"></script>
-  <script src="./Public/js/script2.js"></script>
+    <script src="./Public/js/script.js"></script>
+    <script src="./Public/js/script2.js"></script>
 </body>
 
 </html>
