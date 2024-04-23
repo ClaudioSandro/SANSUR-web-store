@@ -1,21 +1,19 @@
 
 <?php
-/*$host = "localhost"; 
-$usuario = "root"; 
-$contraseña = ""; 
-$base_de_datos = "sansur"; 
+$host = 'localhost'; 
+$usuario = 'root'; 
+$contraseña = ''; 
+$base_de_datos = 'sansur_first_try'; 
 
-
-$conexion = new mysqli($host, $usuario, $contraseña, $base_de_datos);
+// Establecer la conexión
+$conexion = mysqli_connect($host, $usuario, $contraseña, $base_de_datos);
 
 // Verificar la conexión
-if (!$conexion ->connect_error) {
-    die('Error de conexión: ' . $conexion ->connect_error);
+if (!$conexion) {
+    die('Error de conexión: ' . mysqli_connect_error());
 }
-else {
-  echo "<h2>Conectado</h2>" ;
-}*/
 ?>
+
 
 
 <!DOCTYPE html>
@@ -68,7 +66,8 @@ else {
         <span id="CerrarRegistrarse">&times;</span>
         <section id="Registrarse">
             <h2>Registrarse</h2>
-            <form onsubmit="aprobacion()">
+            <form action="" method="post">
+
                 <label for="nombreUsuario">Nombre:</label>
                 <br>
                 <input type="text" id="nombreUsuario" name="nombreUsuario" required>
@@ -97,21 +96,74 @@ else {
                 <br>
                 <input type="date" id="fechaRegistro" name="fechaRegistro" required>
                 <br>
-                <label for="region">Región:</label>
+                <label for="nombreRegion">Región:</label>
                 <br>
-                <input type="text" id="region" name="region" required>
+                <input type="text" id="nombreRegion" name="nombreRegion" required>
                 <br>
-                <label for="distrito">Distrito:</label>
+                <label for="nombreDistrito">Distrito:</label>
                 <br>
-                <input type="text" id="distrito" name="distrito" required>
+                <input type="text" id="nombreDistrito" name="nombreDistrito" required>
                 <br>
-                <label for="direccion">Dirección:</label>
+                <label for="descripcionDireccion">Dirección:</label>
                 <br>
-                <textarea id="direccion" name="direccion" required></textarea>
+                <textarea id="descripcionDireccion" name="descripcionDireccion" required></textarea>
                 <br>
                 <button type="submit">Registrarse</button>
             </form>
         </section>
+        <?php
+            // Verificar si el formulario ha sido enviado
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                // Obtener los datos del formulario
+                $nombreUsuario = $_POST['nombreUsuario'];
+                $apellidoPaterno = $_POST['apellidoPaterno'];
+                $apellidoMaterno = $_POST['apellidoMaterno'];
+                $eMail = $_POST['eMail'];
+                $contrasenia = $_POST['contrasenia'];
+                $celular = $_POST['celular'];
+                $fechaRegistro = $_POST['fechaRegistro'];
+                $nombreRegion = $_POST['nombreRegion'];
+                $nombreDistrito = $_POST['nombreDistrito'];
+                $descripcionDireccion = $_POST['descripcionDireccion'];
+
+                // Insertar en la tabla Region
+                $sql = "INSERT INTO Region (nombreRegion) VALUES ('$nombreRegion')";
+                if (mysqli_query($conexion, $sql)) {
+                    // Obtener el ID de la región recién insertada
+                    $idRegion = mysqli_insert_id($conexion);
+
+                    // Insertar en la tabla Distrito
+                    $sql = "INSERT INTO Distrito (nombreDistrito, Region_idRegion) VALUES ('$nombreDistrito', '$idRegion')";
+                    if (mysqli_query($conexion, $sql)) {
+                        // Obtener el ID del distrito recién insertado
+                        $idDistrito = mysqli_insert_id($conexion);
+
+                        // Insertar en la tabla Direccion
+                        $sql = "INSERT INTO Direccion (descripcionDireccion, Distrito_idDistrito) VALUES ('$descripcionDireccion', '$idDistrito')";
+                        if (mysqli_query($conexion, $sql)) {
+                            // Obtener el ID de la dirección recién insertada
+                            $idDireccion = mysqli_insert_id($conexion);
+
+                            // Insertar en la tabla Usuario
+                            $sql = "INSERT INTO Usuario (nombreUsuario, apellidoPaterno, apellidoMaterno, eMail, contrasenia, celular, fechaRegistro, Direccion_idDireccion) 
+                                    VALUES ('$nombreUsuario', '$apellidoPaterno', '$apellidoMaterno', '$eMail', '$contrasenia', '$celular', '$fechaRegistro', '$idDireccion')";
+                            if (mysqli_query($conexion, $sql)) {
+                                echo "Registro exitoso";
+                            } else {
+                                echo "Error al guardar el usuario: " . mysqli_error($conexion);
+                            }
+                        } else {
+                            echo "Error al guardar la dirección: " . mysqli_error($conexion);
+                        }
+                    } else {
+                        echo "Error al guardar el distrito: " . mysqli_error($conexion);
+                    }
+                } else {
+                    echo "Error al guardar la región: " . mysqli_error($conexion);
+                }
+            }
+        ?>
+
     </div>
   </div>
   
