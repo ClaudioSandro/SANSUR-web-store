@@ -16,6 +16,7 @@ if (!$conexion) {
 
 
 
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -286,7 +287,7 @@ if (!$conexion) {
         <div class="row">
             <i class="fa-solid fa-shield-halved"></i>
             <h3>Seguridad</h3>
-            <p>¿No te gusta? ¡Devuélvelo! navigationo hay nada que no puedas hacer, porque estás siempre protegido.</p>
+            <p>¿No te gusta? ¡Devuélvelo! no hay nada que no puedas hacer, porque estás siempre protegido.</p>
         </div>
     </div>
   </section>
