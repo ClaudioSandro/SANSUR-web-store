@@ -132,8 +132,9 @@ if (!$conexion) {
                 $nombreDistrito = $_POST['nombreDistrito'];
                 $descripcionDireccion = $_POST['descripcionDireccion'];
 
+                $contraseniaHash = password_hash($contrasenia, PASSWORD_DEFAULT);
+                echo "Hash generado: " . $contraseniaHash;
                 
-
                 // Insertar en la tabla Region
                 $sql = "INSERT INTO Region (nombreRegion) VALUES ('$nombreRegion')";
                 if (mysqli_query($conexion, $sql)) {
@@ -154,7 +155,7 @@ if (!$conexion) {
 
                             // Insertar en la tabla Usuario
                             $sql = "INSERT INTO Usuario (nombreUsuario, apellidoPaterno, apellidoMaterno, eMail, contrasenia, celular, fechaRegistro, Direccion_idDireccion) 
-                                    VALUES ('$nombreUsuario', '$apellidoPaterno', '$apellidoMaterno', '$eMail', '$contrasenia', '$celular', '$fechaRegistro', '$idDireccion')";
+                                    VALUES ('$nombreUsuario', '$apellidoPaterno', '$apellidoMaterno', '$eMail', '$contraseniaHash', '$celular', '$fechaRegistro', '$idDireccion')";
                             if (mysqli_query($conexion, $sql)) {
                                 echo "Registro exitoso";
                             } else {
