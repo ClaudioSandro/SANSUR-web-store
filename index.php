@@ -240,18 +240,18 @@ if (!$conexion) {
         <div class="swiper-wrapper">
         <!-- Slides -->
             <div class="swiper-slide">
-                <img src="./Public/img/pantalones/04.jpg"
+                <img src="./Public/img/slider_sansur/Fondo SANSUR swiper 1.jpg"
                     alt=""
                 />
 
             </div>
             <div class="swiper-slide">
-                <img src="./Public/img/pantalones/04.jpg"
+                <img src="./Public/img/slider_sansur/Fondo SANSUR swiper 2.jpg"
                     alt=""
                 />
             </div>
             <div class="swiper-slide">
-                <img src="./Public/img/pantalones/04.jpg"
+                <img src="./Public/img/slider_sansur/Fondo SANSUR swiper 3.jpg"
                     alt=""
                 />
             </div>
