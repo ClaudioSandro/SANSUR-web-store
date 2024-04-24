@@ -3,7 +3,7 @@
 $host = 'localhost'; 
 $usuario = 'root'; 
 $contraseña = ''; 
-$base_de_datos = 'sansur_first_try'; 
+$base_de_datos = 'sansur'; 
 
 // Establecer la conexión
 $conexion = mysqli_connect($host, $usuario, $contraseña, $base_de_datos);
