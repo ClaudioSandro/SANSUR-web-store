@@ -25,7 +25,7 @@ document.getElementById('carritoid').addEventListener('click', function() {
 document.getElementById('CerrarCarrito').addEventListener('click', function() {
     closePopup('carritoComprasbox');
 
-    verificarProductosEliminados();
+    location.reload();
 });
 
 
@@ -58,25 +58,22 @@ function showPopup(Id) {
 
 
 function closePopup(Id) {
-    document.getElementById('opacidad').style.display = 'none'; // Oculta el fondo oscuro
-    document.getElementById(Id).style.display = 'none'; // Oculta la ventana emergente
-    document.body.style.overflow = 'auto'; // Reactiva el desplazamiento
-
-    if(Id === 'carritoComprasbox' ){
-        verificarProductosEliminados();
+    var popup = document.getElementById('carritoComprasbox');
+    if(popup.style.display == 'block'){
+        document.getElementById('opacidad').style.display = 'none'; // Oculta el fondo oscuro
+        document.getElementById(Id).style.display = 'none'; // Oculta la ventana emergente
+        document.body.style.overflow = 'auto'; // Reactiva el desplazamiento
+        location.reload();
+    }else{
+        document.getElementById('opacidad').style.display = 'none'; // Oculta el fondo oscuro
+        document.getElementById(Id).style.display = 'none'; // Oculta la ventana emergente
+        document.body.style.overflow = 'auto'; // Reactiva el desplazamiento
     }
-}
 
-function modooscuro() {
-    const icono = document.getElementById('icono');
+    
 
-    if (document.body.classList.contains('dark-mode')) {
-        icono.textContent = "☀️";
-        document.body.classList.remove('dark-mode');
-    } else {
-        icono.textContent = "🌙";
-        document.body.classList.add('dark-mode');
-    }
+
+
 }
 
 function aprobacion() {
@@ -212,27 +209,6 @@ function actualizarNumerito() {
 
 /////////carrito
 
-
-function verificarProductosEliminados() {
-    location.reload();
-
-    // Verificar si se eliminaron productos del carrito
-    const productosAntesDeCerrar = Carrito.length;
-    // Llama a la función para actualizar el carrito al cerrar la ventana emergente
-    cargarProductosCarrito();
-   
-    let carritoGuardado = localStorage.getItem("productos-en-carrito");
-    Carrito = carritoGuardado ? JSON.parse(carritoGuardado) : [];
-   
-    const productosDespuesDeCerrar = Carrito.length;
-    // Si se eliminaron productos del carrito, recarga la página
-    if (productosAntesDeCerrar !== productosDespuesDeCerrar) {
-        location.reload();
-        console.log("fafafdafaaa");
-    }
-
-
-}
 
 
 function actualizarCarrito() {
