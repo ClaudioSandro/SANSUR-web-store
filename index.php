@@ -1,6 +1,6 @@
 
 <?php
-$host = 'localhost'; 
+/*$host = 'localhost'; 
 $usuario = 'root'; 
 $contraseña = ''; 
 $base_de_datos = 'sansur'; 
@@ -12,6 +12,9 @@ $conexion = mysqli_connect($host, $usuario, $contraseña, $base_de_datos);
 if (!$conexion) {
     die('Error de conexión: ' . mysqli_connect_error());
 }
+
+
+*/
 ?>
 
 
@@ -26,8 +29,8 @@ if (!$conexion) {
   <title>Sansur</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 
 <body>
@@ -157,7 +160,7 @@ if (!$conexion) {
                             $sql = "INSERT INTO Usuario (nombreUsuario, apellidoPaterno, apellidoMaterno, eMail, contrasenia, celular, fechaRegistro, Direccion_idDireccion) 
                                     VALUES ('$nombreUsuario', '$apellidoPaterno', '$apellidoMaterno', '$eMail', '$contraseniaHash', '$celular', '$fechaRegistro', '$idDireccion')";
                             if (mysqli_query($conexion, $sql)) {
-                                echo "Registro exitoso";
+                                echo "<div class='mensaje-agradecimiento'>¡Gracias por registrarte, $nombreUsuario! Tu registro ha sido exitoso.</div>";
                             } else {
                                 echo "Error al guardar el usuario: " . mysqli_error($conexion);
                             }
@@ -181,8 +184,8 @@ if (!$conexion) {
             <span id="CerrarIniciar">&times;</span>
             <section id="iniciarSesion">
                 <h2>Iniciar Sesión</h2>
-                <form>
-                    <label for="nombreUsuario">Nombre:</label>
+                <form method="post" action="">
+                    <label for="nombreUsuario">Nombre de usuario:</label>
                     <br>
                     <input type="text" id="nombreUsuario" name="nombreUsuario" required>
                     <br>
@@ -190,11 +193,42 @@ if (!$conexion) {
                     <br>
                     <input type="password" id="contrasenia" name="contrasenia" required>
                     <br>
-                    <button type="submit">Iniciar Sesión</button>
+                    <button type="submit" name="login">Iniciar Sesión</button>
                 </form>
+
             </section>
         </div>
     </div>
+
+    <?php
+        if (isset($_POST['login'])) {
+            $nombreUsuario = $_POST['nombreUsuario'];
+            $contrasenia = $_POST['contrasenia'];
+
+            // Consulta para buscar al usuario
+            $sql = "SELECT * FROM Usuario WHERE nombreUsuario = '$nombreUsuario'";
+            $result = mysqli_query($conexion, $sql);
+
+            if ($result && mysqli_num_rows($result) > 0) {
+                $user_data = mysqli_fetch_assoc($result);
+                
+                // Verificar la contraseña
+                if (password_verify($contrasenia, $user_data['contrasenia'])) {
+                    // Inicio de sesión exitoso
+                    echo "Inicio de sesión exitoso.";
+                    // Aquí puedes configurar las variables de sesión según tus necesidades
+                    // session_start();
+                    // $_SESSION['nombreUsuario'] = $nombreUsuario;
+                    // Redirigir al usuario a otra página o simplemente mostrar un mensaje de éxito
+                } else {
+                    echo "Contraseña incorrecta.";
+                }
+            } else {
+                echo "Usuario no encontrado.";
+            }
+        }
+    ?>
+
 
     <div id="carritoComprasbox" class="modal">
         <div class="box-content">
@@ -305,10 +339,7 @@ if (!$conexion) {
   <?php 
   include './Public/Components/footer.php'; 
   
-  
   ?>
-
-
 
 
     <script>
