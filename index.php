@@ -54,7 +54,8 @@ if (!$conexion) {
           <a class="cajasnav" id="Registrarseid">Registrarse</a>
           <a class="cajasnav" id="iniciarid">Iniciar sesión</a>
           <a class="cajasnav" id="carritoid"><i class="fa-solid fa-cart-shopping"></i> <span id="numerito" class="numerito">0</span></a>
-      </div>
+          <p class="copy">&copy; 2024 Sansur. <br>Todos los derechos reservados.</p>
+        </div>
         <div class="menuplegable">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -330,11 +331,6 @@ if (!$conexion) {
   </section>
  
 
-  <section id="contacto">
-    <div class="info-container">
-        
-    </div>
-  </section>
 
   <?php 
   include './Public/Components/footer.php'; 
@@ -351,7 +347,7 @@ if (!$conexion) {
         producto.forEach((item) => {
             const questionText = item.querySelector('.producto-detalles h3').innerText.toLowerCase();
             const isVisible = questionText.includes(searchTerm);
-            item.style.display = isVisible ? 'block' : 'none';
+            item.style.display = isVisible ? 'flex' : 'none';
         });
         });
     </script>

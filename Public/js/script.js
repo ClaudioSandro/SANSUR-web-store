@@ -2,8 +2,8 @@
 var hamburger = document.querySelector(".menuplegable");
 var menu = document.querySelector(".menu-items");
 var opacidad = document.getElementById("opacidad");
+var header = document.querySelector(".menu");
 
-	
 
     function abrirMenu() {
         document.body.style.overflow = 'hidden';
@@ -43,10 +43,22 @@ var opacidad = document.getElementById("opacidad");
         event.stopPropagation();
         });
 
+        header.addEventListener("click", function(event) {
+            // Verifica si el menú está activo
+            if (menu.classList.contains("active")) {
+                // Si el menú está activo, detén la propagación del evento
+                event.stopPropagation();
+            }
+        });
+
+
 
 //////
 
-document.getElementById('iniciarid').addEventListener('click', function() {
+document.getElementById('iniciarid').addEventListener('click', function() {  
+    closePopup('carritoComprasbox');
+    closePopup('Registrarsebox');
+
     showPopup('iniciarSesionbox');
 });
 
@@ -56,6 +68,9 @@ document.getElementById('CerrarIniciar').addEventListener('click', function() {
 
 
 document.getElementById('carritoid').addEventListener('click', function() {
+    closePopup('iniciarSesionbox');
+    closePopup('Registrarsebox');
+
     showPopup('carritoComprasbox');
 });
 
@@ -67,6 +82,9 @@ document.getElementById('CerrarCarrito').addEventListener('click', function() {
 
 
 document.getElementById('Registrarseid').addEventListener('click', function() {
+    closePopup('iniciarSesionbox');
+    closePopup('carritoComprasbox');
+
     showPopup('Registrarsebox');
 });
 
