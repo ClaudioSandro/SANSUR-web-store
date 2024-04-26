@@ -1,10 +1,47 @@
 //header
 var hamburger = document.querySelector(".menuplegable");
-	var menu = document.querySelector(".menu-items");
+var menu = document.querySelector(".menu-items");
+var opacidad = document.getElementById("opacidad");
 
-	hamburger.addEventListener("click", function(){
-		menu.classList.toggle("active");
-	})
+	
+
+    function abrirMenu() {
+        document.body.style.overflow = 'hidden';
+        menu.classList.add("active");
+        hamburger.classList.add("close");
+        opacidad.classList.add("activo"); // Agregar la clase activo para mostrar la opacidad
+    }
+
+
+    function cerrarMenu() {
+        document.body.style.overflow = 'auto';
+        menu.classList.remove("active");
+        hamburger.classList.remove("close");
+        opacidad.classList.remove("activo"); // Quitar la clase activo para ocultar la opacidad
+    }
+
+
+    hamburger.addEventListener("click", function(event){
+        if (menu.classList.contains("active")) {
+          
+            cerrarMenu(); // Si el menú está abierto, ciérralo
+        } else {
+          
+            abrirMenu(); // Si el menú está cerrado, ábrelo
+        }
+        event.stopPropagation(); // Evita que el clic en el icono propague al documento
+      });
+      
+
+      document.addEventListener("click", function(event) {
+        if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+          cerrarMenu();
+        }
+        });
+        
+        menu.addEventListener("click", function(event) {
+        event.stopPropagation();
+        });
 
 
 //////
@@ -43,14 +80,28 @@ document.getElementById('opacidad').addEventListener('click', function() {
     closePopup('iniciarSesionbox');
     closePopup('carritoComprasbox');
     closePopup('Registrarsebox');
-
+    cerrarMenu();
 });
 
+
+document.getElementById('iniciarSesionbox').addEventListener('click', function(event) {
+    event.stopPropagation(); // Detiene la propagación del evento hacia arriba
+});
+
+document.getElementById('carritoComprasbox').addEventListener('click', function(event) {
+    event.stopPropagation(); // Detiene la propagación del evento hacia arriba
+});
+
+document.getElementById('Registrarsebox').addEventListener('click', function(event) {
+    event.stopPropagation(); // Detiene la propagación del evento hacia arriba
+});
+
+
 function showPopup(Id) {
-    document.getElementById('opacidad').style.display = 'block'; // Muestra el fondo oscuro
+    opacidad.classList.add("activo"); // Muestra el fondo oscuro
     document.getElementById(Id).style.display = 'block'; // Muestra la ventana emergente
     document.body.style.overflow = 'hidden'; // Desactiva el desplazamiento
-
+    event.stopPropagation();
     if (Id === 'carritoComprasbox') {
         actualizarCarrito();
     }
@@ -60,20 +111,20 @@ function showPopup(Id) {
 function closePopup(Id) {
     var popup = document.getElementById('carritoComprasbox');
     if(popup.style.display == 'block'){
-        document.getElementById('opacidad').style.display = 'none'; // Oculta el fondo oscuro
+        opacidad.classList.remove("activo"); // Oculta el fondo oscuro
         document.getElementById(Id).style.display = 'none'; // Oculta la ventana emergente
         document.body.style.overflow = 'auto'; // Reactiva el desplazamiento
+        event.stopPropagation();
         location.reload();
     }else{
-        document.getElementById('opacidad').style.display = 'none'; // Oculta el fondo oscuro
+
+        if (!menu.classList.contains("active")) {
+            opacidad.classList.remove("activo"); 
+        }
         document.getElementById(Id).style.display = 'none'; // Oculta la ventana emergente
         document.body.style.overflow = 'auto'; // Reactiva el desplazamiento
+        event.stopPropagation();
     }
-
-    
-
-
-
 }
 
 function aprobacion() {
