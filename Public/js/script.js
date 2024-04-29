@@ -404,7 +404,9 @@ function vaciarCarrito() {
         showCancelButton: true,
         focusConfirm: false,
         confirmButtonText: 'Sí',
-        cancelButtonText: 'No'
+        cancelButtonText: 'No',
+        confirmButtonColor: '#007BFF',
+        cancelButtonColor: '#3085d6'
     }).then((result) => {
         if (result.isConfirmed) {
             Carrito.length = 0;
