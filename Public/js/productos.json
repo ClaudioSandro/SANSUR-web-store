@@ -1,182 +1,202 @@
 [
     {
-        "id": "abrigo-01",
-        "titulo": "Abrigo 01",
-        "imagen": "./Public/img/abrigos/01.jpg",
+        "id": "laptop-01",
+        "titulo": "Dell XPS 13",
+        "imagen": "./Public/img/products/Dell XPS 13.jpg",
         "categoria": {
-            "nombre": "Abrigos",
-            "id": "abrigos"
+            "nombre": "Laptops",
+            "id": "laptops"
         },
-        "precio": 1000
+        "precio": 1499
     },
     {
-        "id": "abrigo-02",
-        "titulo": "Abrigo 02",
-        "imagen": "./Public/img/abrigos/02.jpg",
+        "id": "laptop-02",
+        "titulo": "Apple MacBook Pro",
+        "imagen": "./Public/img/products/Apple MacBook Pro.jpg",
         "categoria": {
-            "nombre": "Abrigos",
-            "id": "abrigos"
+            "nombre": "Laptops",
+            "id": "laptops"
         },
-        "precio": 1000
+        "precio": 1799
     },
     {
-        "id": "abrigo-03",
-        "titulo": "Abrigo 03",
-        "imagen": "./Public/img/abrigos/03.jpg",
+        "id": "laptop-03",
+        "titulo": "ASUS ROG Zephyrus G14",
+        "imagen": "./Public/img/products/ASUS ROG Zephyrus G14.jpg",
         "categoria": {
-            "nombre": "Abrigos",
-            "id": "abrigos"
+            "nombre": "Laptops",
+            "id": "laptops"
         },
-        "precio": 1000
+        "precio": 1499
     },
     {
-        "id": "abrigo-04",
-        "titulo": "Abrigo 04",
-        "imagen": "./Public/img/abrigos/04.jpg",
+        "id": "laptop-04",
+        "titulo": "HP Spectre x360",
+        "imagen": "./Public/img/products/HP Spectre x360.jpg",
         "categoria": {
-            "nombre": "Abrigos",
-            "id": "abrigos"
+            "nombre": "Laptops",
+            "id": "laptops"
         },
-        "precio": 1000
+        "precio": 1299
     },
     {
-        "id": "abrigo-05",
-        "titulo": "Abrigo 05",
-        "imagen": "./Public/img/abrigos/05.jpg",
+        "id": "smartphone-01",
+        "titulo": "Samsung Galaxy S21",
+        "imagen": "./Public/img/products/Samsung Galaxy S21.jpg",
         "categoria": {
-            "nombre": "Abrigos",
-            "id": "abrigos"
+            "nombre": "Smartphones",
+            "id": "smartphones"
         },
-        "precio": 1000
+        "precio": 999
     },
     {
-        "id": "camiseta-01",
-        "titulo": "Camiseta 01",
-        "imagen": "./Public/img/camisetas/01.jpg",
+        "id": "smartphone-02",
+        "titulo": "iPhone 13 Pro",
+        "imagen": "./Public/img/products/iPhone 13 Pro.jpg",
         "categoria": {
-            "nombre": "Camisetas",
-            "id": "camisetas"
+            "nombre": "Smartphones",
+            "id": "smartphones"
         },
-        "precio": 1000
+        "precio": 1099
     },
     {
-        "id": "camiseta-02",
-        "titulo": "Camiseta 02",
-        "imagen": "./Public/img/camisetas/02.jpg",
+        "id": "smartphone-03",
+        "titulo": "Google Pixel 6 Pro",
+        "imagen": "./Public/img/products/Google Pixel 6 Pro.jpg",
         "categoria": {
-            "nombre": "Camisetas",
-            "id": "camisetas"
+            "nombre": "Smartphones",
+            "id": "smartphones"
         },
-        "precio": 1000
+        "precio": 899
     },
     {
-        "id": "camiseta-03",
-        "titulo": "Camiseta 03",
-        "imagen": "./Public/img/camisetas/03.jpg",
+        "id": "smartphone-04",
+        "titulo": "OnePlus 9 Pro",
+        "imagen": "./Public/img/products/OnePlus 9 Pro.jpg",
         "categoria": {
-            "nombre": "Camisetas",
-            "id": "camisetas"
+            "nombre": "Smartphones",
+            "id": "smartphones"
         },
-        "precio": 1000
+        "precio": 999
     },
     {
-        "id": "camiseta-04",
-        "titulo": "Camiseta 04",
-        "imagen": "./Public/img/camisetas/04.jpg",
+        "id": "tablet-01",
+        "titulo": "Apple iPad Air",
+        "imagen": "./Public/img/products/Apple iPad Air.jpg",
         "categoria": {
-            "nombre": "Camisetas",
-            "id": "camisetas"
+            "nombre": "Tablets",
+            "id": "tablets"
         },
-        "precio": 1000
+        "precio": 599
     },
     {
-        "id": "camiseta-05",
-        "titulo": "Camiseta 05",
-        "imagen": "./Public/img/camisetas/05.jpg",
+        "id": "tablet-02",
+        "titulo": "Samsung Galaxy Tab S7",
+        "imagen": "./Public/img/products/Samsung Galaxy Tab S7.jpg",
         "categoria": {
-            "nombre": "Camisetas",
-            "id": "camisetas"
+            "nombre": "Tablets",
+            "id": "tablets"
         },
-        "precio": 1000
+        "precio": 649
     },
     {
-        "id": "camiseta-06",
-        "titulo": "Camiseta 06",
-        "imagen": "./Public/img/camisetas/06.jpg",
+        "id": "tablet-03",
+        "titulo": "Microsoft Surface Pro 7",
+        "imagen": "./Public/img/products/Microsoft Surface Pro 7.jpg",
         "categoria": {
-            "nombre": "Camisetas",
-            "id": "camisetas"
+            "nombre": "Tablets",
+            "id": "tablets"
         },
-        "precio": 1000
+        "precio": 799.99
     },
     {
-        "id": "camiseta-07",
-        "titulo": "Camiseta 07",
-        "imagen": "./Public/img/camisetas/07.jpg",
+        "id": "tablet-04",
+        "titulo": "Amazon Fire HD 10",
+        "imagen": "./Public/img/products/Amazon Fire HD 10.jpg",
         "categoria": {
-            "nombre": "Camisetas",
-            "id": "camisetas"
+            "nombre": "Tablets",
+            "id": "tablets"
         },
-        "precio": 1000
+        "precio": 149
     },
     {
-        "id": "camiseta-08",
-        "titulo": "Camiseta 08",
-        "imagen": "./Public/img/camisetas/08.jpg",
+        "id": "ventilador-01",
+        "titulo": "Dyson Pure Cool TP04",
+        "imagen": "./Public/img/products/Dyson Pure Cool TP04.jpg",
         "categoria": {
-            "nombre": "Camisetas",
-            "id": "camisetas"
+            "nombre": "Ventiladores",
+            "id": "ventiladores"
         },
-        "precio": 1000
+        "precio": 549
     },
     {
-        "id": "pantalon-01",
-        "titulo": "Pantalón 01",
-        "imagen": "./Public/img/pantalones/01.jpg",
+        "id": "ventilador-02",
+        "titulo": "Honeywell HT-900E",
+        "imagen": "./Public/img/products/Honeywell HT-900E.jpg",
         "categoria": {
-            "nombre": "Pantalones",
-            "id": "pantalones"
+            "nombre": "Ventiladores",
+            "id": "ventiladores"
         },
-        "precio": 1000
+        "precio": 39
     },
     {
-        "id": "pantalon-02",
-        "titulo": "Pantalón 02",
-        "imagen": "./Public/img/pantalones/02.jpg",
+        "id": "ventilador-03",
+        "titulo": "Xiaomi Mi Smart Standing Fan 2S",
+        "imagen": "./Public/img/products/Xiaomi Mi Smart Standing Fan 2S.jpg",
         "categoria": {
-            "nombre": "Pantalones",
-            "id": "pantalones"
+            "nombre": "Ventiladores",
+            "id": "ventiladores"
         },
-        "precio": 1000
+        "precio": 129
     },
     {
-        "id": "pantalon-03",
-        "titulo": "Pantalón 03",
-        "imagen": "./Public/img/pantalones/03.jpg",
+        "id": "ventilador-04",
+        "titulo": "Rowenta Turbo Silence Extreme",
+        "imagen": "./Public/img/products/Rowenta Turbo Silence Extreme.jpg",
         "categoria": {
-            "nombre": "Pantalones",
-            "id": "pantalones"
+            "nombre": "Ventiladores",
+            "id": "ventiladores"
         },
-        "precio": 1000
+        "precio": 79
     },
     {
-        "id": "pantalon-04",
-        "titulo": "Pantalón 04",
-        "imagen": "./Public/img/pantalones/04.jpg",
+        "id": "auriculares-01",
+        "titulo": "Sony WH-1000XM4",
+        "imagen": "./Public/img/products/Sony WH-1000XM4.jpg",
         "categoria": {
-            "nombre": "Pantalones",
-            "id": "pantalones"
+            "nombre": "Auriculares",
+            "id": "auriculares"
         },
-        "precio": 1000
+        "precio": 349
     },
     {
-        "id": "pantalon-05",
-        "titulo": "Pantalón 05",
-        "imagen": "./Public/img/pantalones/05.jpg",
+        "id": "auriculares-02",
+        "titulo": "Apple AirPods Pro",
+        "imagen": "./Public/img/products/Apple AirPods Pro.jpg",
         "categoria": {
-            "nombre": "Pantalones",
-            "id": "pantalones"
+            "nombre": "Auriculares",
+            "id": "auriculares"
         },
-        "precio": 1000
+        "precio": 249
+    },
+    {
+        "id": "teclado-01",
+        "titulo": "Corsair K95 RGB Platinum",
+        "imagen": "./Public/img/products/Corsair K95 RGB Platinum.jpg",
+        "categoria": {
+            "nombre": "Teclados",
+            "id": "teclados"
+        },
+        "precio": 199
+    },
+    {
+        "id": "mouse-01",
+        "titulo": "Logitech MX Master 3",
+        "imagen": "./Public/img/products/Logitech MX Master 3.jpg",
+        "categoria": {
+            "nombre": "Mouses",
+            "id": "mouses"
+        },
+        "precio": 99
     }
 ]
